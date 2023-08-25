@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Navigation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bubbleContainer" id="bubbleContainer">
+      <div class="centerBubble" id="centerBubble">Click Here</div>
+      <div class="topBubble" id="topBubble"></div>
+      <div class="bottomBubble" id="bottomBubble"></div>
+      <div class="leftBubble" id="leftBubble"></div>
+      <div class="rightBubble" id="rightBubble"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const centerB = document.getElementById("centerBubble");
+        const rightB = document.getElementById("rightBubble");
+        const leftB = document.getElementById("leftBubble");
+        const topB = document.getElementById("topBubble");
+        const bottomB = document.getElementById("bottomBubble");
+
+        centerB.addEventListener("click", () => {
+          rightB.classList.toggle("rightOut");
+          leftB.classList.toggle("leftOut");
+          topB.classList.toggle("topOut");
+          bottomB.classList.toggle("bottomOut");
+        });
+      });
+    </script>
+  </body>
+</html>

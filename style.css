@@ -1,0 +1,120 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --divWidth: 400px;
+  --divHeight: 400px;
+}
+
+/* Align bubbleContainer in center */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.bubbleContainer {
+  position: relative;
+  height: var(--divHeight);
+  width: var(--divWidth);
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.centerBubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 3;
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+}
+
+.topBubble {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  /* top: 7%; */
+}
+.bottomBubble {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  /* bottom: 7%; */
+}
+.leftBubble {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+
+  /* left: 7%; */
+}
+.rightBubble {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  /* right: 7%; */
+}
+
+.rightOut {
+  transform: translateX(calc(0.35 * var(--divWidth)));
+  transition: transform 0.5s ease-in-out;
+}
+.leftOut {
+  transform: translateX(calc(-0.35 * var(--divWidth)));
+  transition: transform 0.5s ease-in;
+}
+.topOut {
+  transform: translateY(calc(0.35 * var(--divHeight)));
+  transition: transform 0.5s ease-in-out;
+}
+.bottomOut {
+  transform: translateY(calc(-0.35 * var(--divHeight)));
+  transition: transform 0.5s ease-in;
+}
